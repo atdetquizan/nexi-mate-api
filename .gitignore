@@ -15,7 +15,6 @@ prisma/generated/
 
 # Vercel
 .vercel/
-vercel.json
 
 # Logs y Archivos Temporales
 *.log
