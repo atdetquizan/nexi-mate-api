@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model User
+ * Model Personal
  * 
  */
-export type User = $Result.DefaultSelection<Prisma.$UserPayload>
+export type Personal = $Result.DefaultSelection<Prisma.$PersonalPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type User = $Result.DefaultSelection<Prisma.$UserPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Users
- * const users = await prisma.user.findMany()
+ * // Fetch zero or more Personals
+ * const personals = await prisma.personal.findMany()
  * ```
  *
  *
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Users
-   * const users = await prisma.user.findMany()
+   * // Fetch zero or more Personals
+   * const personals = await prisma.personal.findMany()
    * ```
    *
    *
@@ -145,14 +145,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.user`: Exposes CRUD operations for the **User** model.
+   * `prisma.personal`: Exposes CRUD operations for the **Personal** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Users
-    * const users = await prisma.user.findMany()
+    * // Fetch zero or more Personals
+    * const personals = await prisma.personal.findMany()
     * ```
     */
-  get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
+  get personal(): Prisma.PersonalDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -593,7 +593,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    User: 'User'
+    Personal: 'Personal'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -612,81 +612,81 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user"
+      modelProps: "personal"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      User: {
-        payload: Prisma.$UserPayload<ExtArgs>
-        fields: Prisma.UserFieldRefs
+      Personal: {
+        payload: Prisma.$PersonalPayload<ExtArgs>
+        fields: Prisma.PersonalFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.UserFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
+            args: Prisma.PersonalFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.UserFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.PersonalFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload>
           }
           findFirst: {
-            args: Prisma.UserFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
+            args: Prisma.PersonalFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.UserFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.PersonalFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload>
           }
           findMany: {
-            args: Prisma.UserFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
+            args: Prisma.PersonalFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload>[]
           }
           create: {
-            args: Prisma.UserCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.PersonalCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload>
           }
           createMany: {
-            args: Prisma.UserCreateManyArgs<ExtArgs>
+            args: Prisma.PersonalCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.UserCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
+            args: Prisma.PersonalCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload>[]
           }
           delete: {
-            args: Prisma.UserDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.PersonalDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload>
           }
           update: {
-            args: Prisma.UserUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.PersonalUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload>
           }
           deleteMany: {
-            args: Prisma.UserDeleteManyArgs<ExtArgs>
+            args: Prisma.PersonalDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.UserUpdateManyArgs<ExtArgs>
+            args: Prisma.PersonalUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.UserUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
+            args: Prisma.PersonalUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload>[]
           }
           upsert: {
-            args: Prisma.UserUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.PersonalUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PersonalPayload>
           }
           aggregate: {
-            args: Prisma.UserAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateUser>
+            args: Prisma.PersonalAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregatePersonal>
           }
           groupBy: {
-            args: Prisma.UserGroupByArgs<ExtArgs>
-            result: $Utils.Optional<UserGroupByOutputType>[]
+            args: Prisma.PersonalGroupByArgs<ExtArgs>
+            result: $Utils.Optional<PersonalGroupByOutputType>[]
           }
           count: {
-            args: Prisma.UserCountArgs<ExtArgs>
-            result: $Utils.Optional<UserCountAggregateOutputType> | number
+            args: Prisma.PersonalCountArgs<ExtArgs>
+            result: $Utils.Optional<PersonalCountAggregateOutputType> | number
           }
         }
       }
@@ -774,7 +774,7 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    user?: UserOmit
+    personal?: PersonalOmit
   }
 
   /* Types for Logging */
@@ -870,382 +870,514 @@ export namespace Prisma {
    */
 
   /**
-   * Model User
+   * Model Personal
    */
 
-  export type AggregateUser = {
-    _count: UserCountAggregateOutputType | null
-    _avg: UserAvgAggregateOutputType | null
-    _sum: UserSumAggregateOutputType | null
-    _min: UserMinAggregateOutputType | null
-    _max: UserMaxAggregateOutputType | null
+  export type AggregatePersonal = {
+    _count: PersonalCountAggregateOutputType | null
+    _avg: PersonalAvgAggregateOutputType | null
+    _sum: PersonalSumAggregateOutputType | null
+    _min: PersonalMinAggregateOutputType | null
+    _max: PersonalMaxAggregateOutputType | null
   }
 
-  export type UserAvgAggregateOutputType = {
+  export type PersonalAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type UserSumAggregateOutputType = {
+  export type PersonalSumAggregateOutputType = {
     id: number | null
   }
 
-  export type UserMinAggregateOutputType = {
+  export type PersonalMinAggregateOutputType = {
     id: number | null
-    name: string | null
-    email: string | null
-    password: string | null
+    firstName: string | null
+    lastName: string | null
+    documentType: string | null
+    documentNumber: string | null
+    profile: string | null
+    scrumMaster: string | null
+    technicalLead: string | null
+    squad: string | null
+    phone: string | null
+    birthDate: Date | null
+    department: string | null
+    province: string | null
+    district: string | null
+    address: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
 
-  export type UserMaxAggregateOutputType = {
+  export type PersonalMaxAggregateOutputType = {
     id: number | null
-    name: string | null
-    email: string | null
-    password: string | null
+    firstName: string | null
+    lastName: string | null
+    documentType: string | null
+    documentNumber: string | null
+    profile: string | null
+    scrumMaster: string | null
+    technicalLead: string | null
+    squad: string | null
+    phone: string | null
+    birthDate: Date | null
+    department: string | null
+    province: string | null
+    district: string | null
+    address: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
 
-  export type UserCountAggregateOutputType = {
+  export type PersonalCountAggregateOutputType = {
     id: number
-    name: number
-    email: number
-    password: number
+    firstName: number
+    lastName: number
+    documentType: number
+    documentNumber: number
+    profile: number
+    scrumMaster: number
+    technicalLead: number
+    squad: number
+    phone: number
+    birthDate: number
+    department: number
+    province: number
+    district: number
+    address: number
     createdAt: number
     updatedAt: number
     _all: number
   }
 
 
-  export type UserAvgAggregateInputType = {
+  export type PersonalAvgAggregateInputType = {
     id?: true
   }
 
-  export type UserSumAggregateInputType = {
+  export type PersonalSumAggregateInputType = {
     id?: true
   }
 
-  export type UserMinAggregateInputType = {
+  export type PersonalMinAggregateInputType = {
     id?: true
-    name?: true
-    email?: true
-    password?: true
+    firstName?: true
+    lastName?: true
+    documentType?: true
+    documentNumber?: true
+    profile?: true
+    scrumMaster?: true
+    technicalLead?: true
+    squad?: true
+    phone?: true
+    birthDate?: true
+    department?: true
+    province?: true
+    district?: true
+    address?: true
     createdAt?: true
     updatedAt?: true
   }
 
-  export type UserMaxAggregateInputType = {
+  export type PersonalMaxAggregateInputType = {
     id?: true
-    name?: true
-    email?: true
-    password?: true
+    firstName?: true
+    lastName?: true
+    documentType?: true
+    documentNumber?: true
+    profile?: true
+    scrumMaster?: true
+    technicalLead?: true
+    squad?: true
+    phone?: true
+    birthDate?: true
+    department?: true
+    province?: true
+    district?: true
+    address?: true
     createdAt?: true
     updatedAt?: true
   }
 
-  export type UserCountAggregateInputType = {
+  export type PersonalCountAggregateInputType = {
     id?: true
-    name?: true
-    email?: true
-    password?: true
+    firstName?: true
+    lastName?: true
+    documentType?: true
+    documentNumber?: true
+    profile?: true
+    scrumMaster?: true
+    technicalLead?: true
+    squad?: true
+    phone?: true
+    birthDate?: true
+    department?: true
+    province?: true
+    district?: true
+    address?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
   }
 
-  export type UserAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which User to aggregate.
+     * Filter which Personal to aggregate.
      */
-    where?: UserWhereInput
+    where?: PersonalWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of Personals to fetch.
      */
-    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
+    orderBy?: PersonalOrderByWithRelationInput | PersonalOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: UserWhereUniqueInput
+    cursor?: PersonalWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` Personals from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` Personals.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Users
+     * Count returned Personals
     **/
-    _count?: true | UserCountAggregateInputType
+    _count?: true | PersonalCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: UserAvgAggregateInputType
+    _avg?: PersonalAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: UserSumAggregateInputType
+    _sum?: PersonalSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: UserMinAggregateInputType
+    _min?: PersonalMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: UserMaxAggregateInputType
+    _max?: PersonalMaxAggregateInputType
   }
 
-  export type GetUserAggregateType<T extends UserAggregateArgs> = {
-        [P in keyof T & keyof AggregateUser]: P extends '_count' | 'count'
+  export type GetPersonalAggregateType<T extends PersonalAggregateArgs> = {
+        [P in keyof T & keyof AggregatePersonal]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateUser[P]>
-      : GetScalarType<T[P], AggregateUser[P]>
+        : GetScalarType<T[P], AggregatePersonal[P]>
+      : GetScalarType<T[P], AggregatePersonal[P]>
   }
 
 
 
 
-  export type UserGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: UserWhereInput
-    orderBy?: UserOrderByWithAggregationInput | UserOrderByWithAggregationInput[]
-    by: UserScalarFieldEnum[] | UserScalarFieldEnum
-    having?: UserScalarWhereWithAggregatesInput
+  export type PersonalGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PersonalWhereInput
+    orderBy?: PersonalOrderByWithAggregationInput | PersonalOrderByWithAggregationInput[]
+    by: PersonalScalarFieldEnum[] | PersonalScalarFieldEnum
+    having?: PersonalScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: UserCountAggregateInputType | true
-    _avg?: UserAvgAggregateInputType
-    _sum?: UserSumAggregateInputType
-    _min?: UserMinAggregateInputType
-    _max?: UserMaxAggregateInputType
+    _count?: PersonalCountAggregateInputType | true
+    _avg?: PersonalAvgAggregateInputType
+    _sum?: PersonalSumAggregateInputType
+    _min?: PersonalMinAggregateInputType
+    _max?: PersonalMaxAggregateInputType
   }
 
-  export type UserGroupByOutputType = {
+  export type PersonalGroupByOutputType = {
     id: number
-    name: string
-    email: string
-    password: string
+    firstName: string
+    lastName: string
+    documentType: string
+    documentNumber: string
+    profile: string
+    scrumMaster: string | null
+    technicalLead: string | null
+    squad: string | null
+    phone: string
+    birthDate: Date
+    department: string
+    province: string
+    district: string
+    address: string
     createdAt: Date
     updatedAt: Date
-    _count: UserCountAggregateOutputType | null
-    _avg: UserAvgAggregateOutputType | null
-    _sum: UserSumAggregateOutputType | null
-    _min: UserMinAggregateOutputType | null
-    _max: UserMaxAggregateOutputType | null
+    _count: PersonalCountAggregateOutputType | null
+    _avg: PersonalAvgAggregateOutputType | null
+    _sum: PersonalSumAggregateOutputType | null
+    _min: PersonalMinAggregateOutputType | null
+    _max: PersonalMaxAggregateOutputType | null
   }
 
-  type GetUserGroupByPayload<T extends UserGroupByArgs> = Prisma.PrismaPromise<
+  type GetPersonalGroupByPayload<T extends PersonalGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<UserGroupByOutputType, T['by']> &
+      PickEnumerable<PersonalGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof UserGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof PersonalGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], UserGroupByOutputType[P]>
-            : GetScalarType<T[P], UserGroupByOutputType[P]>
+              : GetScalarType<T[P], PersonalGroupByOutputType[P]>
+            : GetScalarType<T[P], PersonalGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type UserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PersonalSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
-    email?: boolean
-    password?: boolean
+    firstName?: boolean
+    lastName?: boolean
+    documentType?: boolean
+    documentNumber?: boolean
+    profile?: boolean
+    scrumMaster?: boolean
+    technicalLead?: boolean
+    squad?: boolean
+    phone?: boolean
+    birthDate?: boolean
+    department?: boolean
+    province?: boolean
+    district?: boolean
+    address?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["user"]>
+  }, ExtArgs["result"]["personal"]>
 
-  export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PersonalSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
-    email?: boolean
-    password?: boolean
+    firstName?: boolean
+    lastName?: boolean
+    documentType?: boolean
+    documentNumber?: boolean
+    profile?: boolean
+    scrumMaster?: boolean
+    technicalLead?: boolean
+    squad?: boolean
+    phone?: boolean
+    birthDate?: boolean
+    department?: boolean
+    province?: boolean
+    district?: boolean
+    address?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["user"]>
+  }, ExtArgs["result"]["personal"]>
 
-  export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PersonalSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
-    email?: boolean
-    password?: boolean
+    firstName?: boolean
+    lastName?: boolean
+    documentType?: boolean
+    documentNumber?: boolean
+    profile?: boolean
+    scrumMaster?: boolean
+    technicalLead?: boolean
+    squad?: boolean
+    phone?: boolean
+    birthDate?: boolean
+    department?: boolean
+    province?: boolean
+    district?: boolean
+    address?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["user"]>
+  }, ExtArgs["result"]["personal"]>
 
-  export type UserSelectScalar = {
+  export type PersonalSelectScalar = {
     id?: boolean
-    name?: boolean
-    email?: boolean
-    password?: boolean
+    firstName?: boolean
+    lastName?: boolean
+    documentType?: boolean
+    documentNumber?: boolean
+    profile?: boolean
+    scrumMaster?: boolean
+    technicalLead?: boolean
+    squad?: boolean
+    phone?: boolean
+    birthDate?: boolean
+    department?: boolean
+    province?: boolean
+    district?: boolean
+    address?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+  export type PersonalOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "firstName" | "lastName" | "documentType" | "documentNumber" | "profile" | "scrumMaster" | "technicalLead" | "squad" | "phone" | "birthDate" | "department" | "province" | "district" | "address" | "createdAt" | "updatedAt", ExtArgs["result"]["personal"]>
 
-  export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "User"
+  export type $PersonalPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Personal"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      name: string
-      email: string
-      password: string
+      firstName: string
+      lastName: string
+      documentType: string
+      documentNumber: string
+      profile: string
+      scrumMaster: string | null
+      technicalLead: string | null
+      squad: string | null
+      phone: string
+      birthDate: Date
+      department: string
+      province: string
+      district: string
+      address: string
       createdAt: Date
       updatedAt: Date
-    }, ExtArgs["result"]["user"]>
+    }, ExtArgs["result"]["personal"]>
     composites: {}
   }
 
-  type UserGetPayload<S extends boolean | null | undefined | UserDefaultArgs> = $Result.GetResult<Prisma.$UserPayload, S>
+  type PersonalGetPayload<S extends boolean | null | undefined | PersonalDefaultArgs> = $Result.GetResult<Prisma.$PersonalPayload, S>
 
-  type UserCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<UserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: UserCountAggregateInputType | true
+  type PersonalCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<PersonalFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: PersonalCountAggregateInputType | true
     }
 
-  export interface UserDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['User'], meta: { name: 'User' } }
+  export interface PersonalDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Personal'], meta: { name: 'Personal' } }
     /**
-     * Find zero or one User that matches the filter.
-     * @param {UserFindUniqueArgs} args - Arguments to find a User
+     * Find zero or one Personal that matches the filter.
+     * @param {PersonalFindUniqueArgs} args - Arguments to find a Personal
      * @example
-     * // Get one User
-     * const user = await prisma.user.findUnique({
+     * // Get one Personal
+     * const personal = await prisma.personal.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends UserFindUniqueArgs>(args: SelectSubset<T, UserFindUniqueArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends PersonalFindUniqueArgs>(args: SelectSubset<T, PersonalFindUniqueArgs<ExtArgs>>): Prisma__PersonalClient<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one User that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Personal that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {UserFindUniqueOrThrowArgs} args - Arguments to find a User
+     * @param {PersonalFindUniqueOrThrowArgs} args - Arguments to find a Personal
      * @example
-     * // Get one User
-     * const user = await prisma.user.findUniqueOrThrow({
+     * // Get one Personal
+     * const personal = await prisma.personal.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends UserFindUniqueOrThrowArgs>(args: SelectSubset<T, UserFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends PersonalFindUniqueOrThrowArgs>(args: SelectSubset<T, PersonalFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PersonalClient<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first User that matches the filter.
+     * Find the first Personal that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserFindFirstArgs} args - Arguments to find a User
+     * @param {PersonalFindFirstArgs} args - Arguments to find a Personal
      * @example
-     * // Get one User
-     * const user = await prisma.user.findFirst({
+     * // Get one Personal
+     * const personal = await prisma.personal.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends UserFindFirstArgs>(args?: SelectSubset<T, UserFindFirstArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends PersonalFindFirstArgs>(args?: SelectSubset<T, PersonalFindFirstArgs<ExtArgs>>): Prisma__PersonalClient<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first User that matches the filter or
+     * Find the first Personal that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserFindFirstOrThrowArgs} args - Arguments to find a User
+     * @param {PersonalFindFirstOrThrowArgs} args - Arguments to find a Personal
      * @example
-     * // Get one User
-     * const user = await prisma.user.findFirstOrThrow({
+     * // Get one Personal
+     * const personal = await prisma.personal.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends UserFindFirstOrThrowArgs>(args?: SelectSubset<T, UserFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends PersonalFindFirstOrThrowArgs>(args?: SelectSubset<T, PersonalFindFirstOrThrowArgs<ExtArgs>>): Prisma__PersonalClient<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Users that matches the filter.
+     * Find zero or more Personals that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {PersonalFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Users
-     * const users = await prisma.user.findMany()
+     * // Get all Personals
+     * const personals = await prisma.personal.findMany()
      * 
-     * // Get first 10 Users
-     * const users = await prisma.user.findMany({ take: 10 })
+     * // Get first 10 Personals
+     * const personals = await prisma.personal.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const userWithIdOnly = await prisma.user.findMany({ select: { id: true } })
+     * const personalWithIdOnly = await prisma.personal.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends UserFindManyArgs>(args?: SelectSubset<T, UserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends PersonalFindManyArgs>(args?: SelectSubset<T, PersonalFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a User.
-     * @param {UserCreateArgs} args - Arguments to create a User.
+     * Create a Personal.
+     * @param {PersonalCreateArgs} args - Arguments to create a Personal.
      * @example
-     * // Create one User
-     * const User = await prisma.user.create({
+     * // Create one Personal
+     * const Personal = await prisma.personal.create({
      *   data: {
-     *     // ... data to create a User
+     *     // ... data to create a Personal
      *   }
      * })
      * 
      */
-    create<T extends UserCreateArgs>(args: SelectSubset<T, UserCreateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends PersonalCreateArgs>(args: SelectSubset<T, PersonalCreateArgs<ExtArgs>>): Prisma__PersonalClient<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Users.
-     * @param {UserCreateManyArgs} args - Arguments to create many Users.
+     * Create many Personals.
+     * @param {PersonalCreateManyArgs} args - Arguments to create many Personals.
      * @example
-     * // Create many Users
-     * const user = await prisma.user.createMany({
+     * // Create many Personals
+     * const personal = await prisma.personal.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends UserCreateManyArgs>(args?: SelectSubset<T, UserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends PersonalCreateManyArgs>(args?: SelectSubset<T, PersonalCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Users and returns the data saved in the database.
-     * @param {UserCreateManyAndReturnArgs} args - Arguments to create many Users.
+     * Create many Personals and returns the data saved in the database.
+     * @param {PersonalCreateManyAndReturnArgs} args - Arguments to create many Personals.
      * @example
-     * // Create many Users
-     * const user = await prisma.user.createManyAndReturn({
+     * // Create many Personals
+     * const personal = await prisma.personal.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Users and only return the `id`
-     * const userWithIdOnly = await prisma.user.createManyAndReturn({
+     * // Create many Personals and only return the `id`
+     * const personalWithIdOnly = await prisma.personal.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1255,28 +1387,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends UserCreateManyAndReturnArgs>(args?: SelectSubset<T, UserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends PersonalCreateManyAndReturnArgs>(args?: SelectSubset<T, PersonalCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a User.
-     * @param {UserDeleteArgs} args - Arguments to delete one User.
+     * Delete a Personal.
+     * @param {PersonalDeleteArgs} args - Arguments to delete one Personal.
      * @example
-     * // Delete one User
-     * const User = await prisma.user.delete({
+     * // Delete one Personal
+     * const Personal = await prisma.personal.delete({
      *   where: {
-     *     // ... filter to delete one User
+     *     // ... filter to delete one Personal
      *   }
      * })
      * 
      */
-    delete<T extends UserDeleteArgs>(args: SelectSubset<T, UserDeleteArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends PersonalDeleteArgs>(args: SelectSubset<T, PersonalDeleteArgs<ExtArgs>>): Prisma__PersonalClient<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one User.
-     * @param {UserUpdateArgs} args - Arguments to update one User.
+     * Update one Personal.
+     * @param {PersonalUpdateArgs} args - Arguments to update one Personal.
      * @example
-     * // Update one User
-     * const user = await prisma.user.update({
+     * // Update one Personal
+     * const personal = await prisma.personal.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1286,30 +1418,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends UserUpdateArgs>(args: SelectSubset<T, UserUpdateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends PersonalUpdateArgs>(args: SelectSubset<T, PersonalUpdateArgs<ExtArgs>>): Prisma__PersonalClient<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Users.
-     * @param {UserDeleteManyArgs} args - Arguments to filter Users to delete.
+     * Delete zero or more Personals.
+     * @param {PersonalDeleteManyArgs} args - Arguments to filter Personals to delete.
      * @example
-     * // Delete a few Users
-     * const { count } = await prisma.user.deleteMany({
+     * // Delete a few Personals
+     * const { count } = await prisma.personal.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends UserDeleteManyArgs>(args?: SelectSubset<T, UserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends PersonalDeleteManyArgs>(args?: SelectSubset<T, PersonalDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Users.
+     * Update zero or more Personals.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {PersonalUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Users
-     * const user = await prisma.user.updateMany({
+     * // Update many Personals
+     * const personal = await prisma.personal.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1319,14 +1451,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends UserUpdateManyArgs>(args: SelectSubset<T, UserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends PersonalUpdateManyArgs>(args: SelectSubset<T, PersonalUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Users and returns the data updated in the database.
-     * @param {UserUpdateManyAndReturnArgs} args - Arguments to update many Users.
+     * Update zero or more Personals and returns the data updated in the database.
+     * @param {PersonalUpdateManyAndReturnArgs} args - Arguments to update many Personals.
      * @example
-     * // Update many Users
-     * const user = await prisma.user.updateManyAndReturn({
+     * // Update many Personals
+     * const personal = await prisma.personal.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1335,8 +1467,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Users and only return the `id`
-     * const userWithIdOnly = await prisma.user.updateManyAndReturn({
+     * // Update zero or more Personals and only return the `id`
+     * const personalWithIdOnly = await prisma.personal.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1349,56 +1481,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends UserUpdateManyAndReturnArgs>(args: SelectSubset<T, UserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends PersonalUpdateManyAndReturnArgs>(args: SelectSubset<T, PersonalUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one User.
-     * @param {UserUpsertArgs} args - Arguments to update or create a User.
+     * Create or update one Personal.
+     * @param {PersonalUpsertArgs} args - Arguments to update or create a Personal.
      * @example
-     * // Update or create a User
-     * const user = await prisma.user.upsert({
+     * // Update or create a Personal
+     * const personal = await prisma.personal.upsert({
      *   create: {
-     *     // ... data to create a User
+     *     // ... data to create a Personal
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the User we want to update
+     *     // ... the filter for the Personal we want to update
      *   }
      * })
      */
-    upsert<T extends UserUpsertArgs>(args: SelectSubset<T, UserUpsertArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends PersonalUpsertArgs>(args: SelectSubset<T, PersonalUpsertArgs<ExtArgs>>): Prisma__PersonalClient<$Result.GetResult<Prisma.$PersonalPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Users.
+     * Count the number of Personals.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserCountArgs} args - Arguments to filter Users to count.
+     * @param {PersonalCountArgs} args - Arguments to filter Personals to count.
      * @example
-     * // Count the number of Users
-     * const count = await prisma.user.count({
+     * // Count the number of Personals
+     * const count = await prisma.personal.count({
      *   where: {
-     *     // ... the filter for the Users we want to count
+     *     // ... the filter for the Personals we want to count
      *   }
      * })
     **/
-    count<T extends UserCountArgs>(
-      args?: Subset<T, UserCountArgs>,
+    count<T extends PersonalCountArgs>(
+      args?: Subset<T, PersonalCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], UserCountAggregateOutputType>
+          : GetScalarType<T['select'], PersonalCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a User.
+     * Allows you to perform aggregations operations on a Personal.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {PersonalAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1418,13 +1550,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends UserAggregateArgs>(args: Subset<T, UserAggregateArgs>): Prisma.PrismaPromise<GetUserAggregateType<T>>
+    aggregate<T extends PersonalAggregateArgs>(args: Subset<T, PersonalAggregateArgs>): Prisma.PrismaPromise<GetPersonalAggregateType<T>>
 
     /**
-     * Group by User.
+     * Group by Personal.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserGroupByArgs} args - Group by arguments.
+     * @param {PersonalGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1439,14 +1571,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends UserGroupByArgs,
+      T extends PersonalGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: UserGroupByArgs['orderBy'] }
-        : { orderBy?: UserGroupByArgs['orderBy'] },
+        ? { orderBy: PersonalGroupByArgs['orderBy'] }
+        : { orderBy?: PersonalGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1495,20 +1627,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, UserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, PersonalGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPersonalGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the User model
+   * Fields of the Personal model
    */
-  readonly fields: UserFieldRefs;
+  readonly fields: PersonalFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for User.
+   * The delegate class that acts as a "Promise-like" for Personal.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__PersonalClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1536,378 +1668,389 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the User model
+   * Fields of the Personal model
    */
-  interface UserFieldRefs {
-    readonly id: FieldRef<"User", 'Int'>
-    readonly name: FieldRef<"User", 'String'>
-    readonly email: FieldRef<"User", 'String'>
-    readonly password: FieldRef<"User", 'String'>
-    readonly createdAt: FieldRef<"User", 'DateTime'>
-    readonly updatedAt: FieldRef<"User", 'DateTime'>
+  interface PersonalFieldRefs {
+    readonly id: FieldRef<"Personal", 'Int'>
+    readonly firstName: FieldRef<"Personal", 'String'>
+    readonly lastName: FieldRef<"Personal", 'String'>
+    readonly documentType: FieldRef<"Personal", 'String'>
+    readonly documentNumber: FieldRef<"Personal", 'String'>
+    readonly profile: FieldRef<"Personal", 'String'>
+    readonly scrumMaster: FieldRef<"Personal", 'String'>
+    readonly technicalLead: FieldRef<"Personal", 'String'>
+    readonly squad: FieldRef<"Personal", 'String'>
+    readonly phone: FieldRef<"Personal", 'String'>
+    readonly birthDate: FieldRef<"Personal", 'DateTime'>
+    readonly department: FieldRef<"Personal", 'String'>
+    readonly province: FieldRef<"Personal", 'String'>
+    readonly district: FieldRef<"Personal", 'String'>
+    readonly address: FieldRef<"Personal", 'String'>
+    readonly createdAt: FieldRef<"Personal", 'DateTime'>
+    readonly updatedAt: FieldRef<"Personal", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * User findUnique
+   * Personal findUnique
    */
-  export type UserFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * Filter, which User to fetch.
+     * Filter, which Personal to fetch.
      */
-    where: UserWhereUniqueInput
+    where: PersonalWhereUniqueInput
   }
 
   /**
-   * User findUniqueOrThrow
+   * Personal findUniqueOrThrow
    */
-  export type UserFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * Filter, which User to fetch.
+     * Filter, which Personal to fetch.
      */
-    where: UserWhereUniqueInput
+    where: PersonalWhereUniqueInput
   }
 
   /**
-   * User findFirst
+   * Personal findFirst
    */
-  export type UserFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * Filter, which User to fetch.
+     * Filter, which Personal to fetch.
      */
-    where?: UserWhereInput
+    where?: PersonalWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of Personals to fetch.
      */
-    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
+    orderBy?: PersonalOrderByWithRelationInput | PersonalOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Users.
+     * Sets the position for searching for Personals.
      */
-    cursor?: UserWhereUniqueInput
+    cursor?: PersonalWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` Personals from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` Personals.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Users.
+     * Filter by unique combinations of Personals.
      */
-    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
+    distinct?: PersonalScalarFieldEnum | PersonalScalarFieldEnum[]
   }
 
   /**
-   * User findFirstOrThrow
+   * Personal findFirstOrThrow
    */
-  export type UserFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * Filter, which User to fetch.
+     * Filter, which Personal to fetch.
      */
-    where?: UserWhereInput
+    where?: PersonalWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of Personals to fetch.
      */
-    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
+    orderBy?: PersonalOrderByWithRelationInput | PersonalOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Users.
+     * Sets the position for searching for Personals.
      */
-    cursor?: UserWhereUniqueInput
+    cursor?: PersonalWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` Personals from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` Personals.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Users.
+     * Filter by unique combinations of Personals.
      */
-    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
+    distinct?: PersonalScalarFieldEnum | PersonalScalarFieldEnum[]
   }
 
   /**
-   * User findMany
+   * Personal findMany
    */
-  export type UserFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * Filter, which Users to fetch.
+     * Filter, which Personals to fetch.
      */
-    where?: UserWhereInput
+    where?: PersonalWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of Personals to fetch.
      */
-    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
+    orderBy?: PersonalOrderByWithRelationInput | PersonalOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Users.
+     * Sets the position for listing Personals.
      */
-    cursor?: UserWhereUniqueInput
+    cursor?: PersonalWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` Personals from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` Personals.
      */
     skip?: number
-    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
+    distinct?: PersonalScalarFieldEnum | PersonalScalarFieldEnum[]
   }
 
   /**
-   * User create
+   * Personal create
    */
-  export type UserCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * The data needed to create a User.
+     * The data needed to create a Personal.
      */
-    data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    data: XOR<PersonalCreateInput, PersonalUncheckedCreateInput>
   }
 
   /**
-   * User createMany
+   * Personal createMany
    */
-  export type UserCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Users.
+     * The data used to create many Personals.
      */
-    data: UserCreateManyInput | UserCreateManyInput[]
+    data: PersonalCreateManyInput | PersonalCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * User createManyAndReturn
+   * Personal createManyAndReturn
    */
-  export type UserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelectCreateManyAndReturn<ExtArgs> | null
+    select?: PersonalSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * The data used to create many Users.
+     * The data used to create many Personals.
      */
-    data: UserCreateManyInput | UserCreateManyInput[]
+    data: PersonalCreateManyInput | PersonalCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * User update
+   * Personal update
    */
-  export type UserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * The data needed to update a User.
+     * The data needed to update a Personal.
      */
-    data: XOR<UserUpdateInput, UserUncheckedUpdateInput>
+    data: XOR<PersonalUpdateInput, PersonalUncheckedUpdateInput>
     /**
-     * Choose, which User to update.
+     * Choose, which Personal to update.
      */
-    where: UserWhereUniqueInput
+    where: PersonalWhereUniqueInput
   }
 
   /**
-   * User updateMany
+   * Personal updateMany
    */
-  export type UserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Users.
+     * The data used to update Personals.
      */
-    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
+    data: XOR<PersonalUpdateManyMutationInput, PersonalUncheckedUpdateManyInput>
     /**
-     * Filter which Users to update
+     * Filter which Personals to update
      */
-    where?: UserWhereInput
+    where?: PersonalWhereInput
     /**
-     * Limit how many Users to update.
+     * Limit how many Personals to update.
      */
     limit?: number
   }
 
   /**
-   * User updateManyAndReturn
+   * Personal updateManyAndReturn
    */
-  export type UserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: PersonalSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * The data used to update Users.
+     * The data used to update Personals.
      */
-    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
+    data: XOR<PersonalUpdateManyMutationInput, PersonalUncheckedUpdateManyInput>
     /**
-     * Filter which Users to update
+     * Filter which Personals to update
      */
-    where?: UserWhereInput
+    where?: PersonalWhereInput
     /**
-     * Limit how many Users to update.
+     * Limit how many Personals to update.
      */
     limit?: number
   }
 
   /**
-   * User upsert
+   * Personal upsert
    */
-  export type UserUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * The filter to search for the User to update in case it exists.
+     * The filter to search for the Personal to update in case it exists.
      */
-    where: UserWhereUniqueInput
+    where: PersonalWhereUniqueInput
     /**
-     * In case the User found by the `where` argument doesn't exist, create a new User with this data.
+     * In case the Personal found by the `where` argument doesn't exist, create a new Personal with this data.
      */
-    create: XOR<UserCreateInput, UserUncheckedCreateInput>
+    create: XOR<PersonalCreateInput, PersonalUncheckedCreateInput>
     /**
-     * In case the User was found with the provided `where` argument, update it with this data.
+     * In case the Personal was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<UserUpdateInput, UserUncheckedUpdateInput>
+    update: XOR<PersonalUpdateInput, PersonalUncheckedUpdateInput>
   }
 
   /**
-   * User delete
+   * Personal delete
    */
-  export type UserDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
     /**
-     * Filter which User to delete.
+     * Filter which Personal to delete.
      */
-    where: UserWhereUniqueInput
+    where: PersonalWhereUniqueInput
   }
 
   /**
-   * User deleteMany
+   * Personal deleteMany
    */
-  export type UserDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Users to delete
+     * Filter which Personals to delete
      */
-    where?: UserWhereInput
+    where?: PersonalWhereInput
     /**
-     * Limit how many Users to delete.
+     * Limit how many Personals to delete.
      */
     limit?: number
   }
 
   /**
-   * User without action
+   * Personal without action
    */
-  export type UserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PersonalDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the Personal
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: PersonalSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the Personal
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: PersonalOmit<ExtArgs> | null
   }
 
 
@@ -1925,16 +2068,27 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const UserScalarFieldEnum: {
+  export const PersonalScalarFieldEnum: {
     id: 'id',
-    name: 'name',
-    email: 'email',
-    password: 'password',
+    firstName: 'firstName',
+    lastName: 'lastName',
+    documentType: 'documentType',
+    documentNumber: 'documentNumber',
+    profile: 'profile',
+    scrumMaster: 'scrumMaster',
+    technicalLead: 'technicalLead',
+    squad: 'squad',
+    phone: 'phone',
+    birthDate: 'birthDate',
+    department: 'department',
+    province: 'province',
+    district: 'district',
+    address: 'address',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
 
-  export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+  export type PersonalScalarFieldEnum = (typeof PersonalScalarFieldEnum)[keyof typeof PersonalScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1951,6 +2105,14 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+  export const NullsOrder: {
+    first: 'first',
+    last: 'last'
+  };
+
+  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -2017,121 +2179,253 @@ export namespace Prisma {
    */
 
 
-  export type UserWhereInput = {
-    AND?: UserWhereInput | UserWhereInput[]
-    OR?: UserWhereInput[]
-    NOT?: UserWhereInput | UserWhereInput[]
-    id?: IntFilter<"User"> | number
-    name?: StringFilter<"User"> | string
-    email?: StringFilter<"User"> | string
-    password?: StringFilter<"User"> | string
-    createdAt?: DateTimeFilter<"User"> | Date | string
-    updatedAt?: DateTimeFilter<"User"> | Date | string
+  export type PersonalWhereInput = {
+    AND?: PersonalWhereInput | PersonalWhereInput[]
+    OR?: PersonalWhereInput[]
+    NOT?: PersonalWhereInput | PersonalWhereInput[]
+    id?: IntFilter<"Personal"> | number
+    firstName?: StringFilter<"Personal"> | string
+    lastName?: StringFilter<"Personal"> | string
+    documentType?: StringFilter<"Personal"> | string
+    documentNumber?: StringFilter<"Personal"> | string
+    profile?: StringFilter<"Personal"> | string
+    scrumMaster?: StringNullableFilter<"Personal"> | string | null
+    technicalLead?: StringNullableFilter<"Personal"> | string | null
+    squad?: StringNullableFilter<"Personal"> | string | null
+    phone?: StringFilter<"Personal"> | string
+    birthDate?: DateTimeFilter<"Personal"> | Date | string
+    department?: StringFilter<"Personal"> | string
+    province?: StringFilter<"Personal"> | string
+    district?: StringFilter<"Personal"> | string
+    address?: StringFilter<"Personal"> | string
+    createdAt?: DateTimeFilter<"Personal"> | Date | string
+    updatedAt?: DateTimeFilter<"Personal"> | Date | string
   }
 
-  export type UserOrderByWithRelationInput = {
+  export type PersonalOrderByWithRelationInput = {
     id?: SortOrder
-    name?: SortOrder
-    email?: SortOrder
-    password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+    documentType?: SortOrder
+    documentNumber?: SortOrder
+    profile?: SortOrder
+    scrumMaster?: SortOrderInput | SortOrder
+    technicalLead?: SortOrderInput | SortOrder
+    squad?: SortOrderInput | SortOrder
+    phone?: SortOrder
+    birthDate?: SortOrder
+    department?: SortOrder
+    province?: SortOrder
+    district?: SortOrder
+    address?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
-  export type UserWhereUniqueInput = Prisma.AtLeast<{
+  export type PersonalWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    email?: string
-    AND?: UserWhereInput | UserWhereInput[]
-    OR?: UserWhereInput[]
-    NOT?: UserWhereInput | UserWhereInput[]
-    name?: StringFilter<"User"> | string
-    password?: StringFilter<"User"> | string
-    createdAt?: DateTimeFilter<"User"> | Date | string
-    updatedAt?: DateTimeFilter<"User"> | Date | string
-  }, "id" | "email">
+    documentNumber?: string
+    AND?: PersonalWhereInput | PersonalWhereInput[]
+    OR?: PersonalWhereInput[]
+    NOT?: PersonalWhereInput | PersonalWhereInput[]
+    firstName?: StringFilter<"Personal"> | string
+    lastName?: StringFilter<"Personal"> | string
+    documentType?: StringFilter<"Personal"> | string
+    profile?: StringFilter<"Personal"> | string
+    scrumMaster?: StringNullableFilter<"Personal"> | string | null
+    technicalLead?: StringNullableFilter<"Personal"> | string | null
+    squad?: StringNullableFilter<"Personal"> | string | null
+    phone?: StringFilter<"Personal"> | string
+    birthDate?: DateTimeFilter<"Personal"> | Date | string
+    department?: StringFilter<"Personal"> | string
+    province?: StringFilter<"Personal"> | string
+    district?: StringFilter<"Personal"> | string
+    address?: StringFilter<"Personal"> | string
+    createdAt?: DateTimeFilter<"Personal"> | Date | string
+    updatedAt?: DateTimeFilter<"Personal"> | Date | string
+  }, "id" | "documentNumber">
 
-  export type UserOrderByWithAggregationInput = {
+  export type PersonalOrderByWithAggregationInput = {
     id?: SortOrder
-    name?: SortOrder
-    email?: SortOrder
-    password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+    documentType?: SortOrder
+    documentNumber?: SortOrder
+    profile?: SortOrder
+    scrumMaster?: SortOrderInput | SortOrder
+    technicalLead?: SortOrderInput | SortOrder
+    squad?: SortOrderInput | SortOrder
+    phone?: SortOrder
+    birthDate?: SortOrder
+    department?: SortOrder
+    province?: SortOrder
+    district?: SortOrder
+    address?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: UserCountOrderByAggregateInput
-    _avg?: UserAvgOrderByAggregateInput
-    _max?: UserMaxOrderByAggregateInput
-    _min?: UserMinOrderByAggregateInput
-    _sum?: UserSumOrderByAggregateInput
+    _count?: PersonalCountOrderByAggregateInput
+    _avg?: PersonalAvgOrderByAggregateInput
+    _max?: PersonalMaxOrderByAggregateInput
+    _min?: PersonalMinOrderByAggregateInput
+    _sum?: PersonalSumOrderByAggregateInput
   }
 
-  export type UserScalarWhereWithAggregatesInput = {
-    AND?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
-    OR?: UserScalarWhereWithAggregatesInput[]
-    NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"User"> | number
-    name?: StringWithAggregatesFilter<"User"> | string
-    email?: StringWithAggregatesFilter<"User"> | string
-    password?: StringWithAggregatesFilter<"User"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+  export type PersonalScalarWhereWithAggregatesInput = {
+    AND?: PersonalScalarWhereWithAggregatesInput | PersonalScalarWhereWithAggregatesInput[]
+    OR?: PersonalScalarWhereWithAggregatesInput[]
+    NOT?: PersonalScalarWhereWithAggregatesInput | PersonalScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Personal"> | number
+    firstName?: StringWithAggregatesFilter<"Personal"> | string
+    lastName?: StringWithAggregatesFilter<"Personal"> | string
+    documentType?: StringWithAggregatesFilter<"Personal"> | string
+    documentNumber?: StringWithAggregatesFilter<"Personal"> | string
+    profile?: StringWithAggregatesFilter<"Personal"> | string
+    scrumMaster?: StringNullableWithAggregatesFilter<"Personal"> | string | null
+    technicalLead?: StringNullableWithAggregatesFilter<"Personal"> | string | null
+    squad?: StringNullableWithAggregatesFilter<"Personal"> | string | null
+    phone?: StringWithAggregatesFilter<"Personal"> | string
+    birthDate?: DateTimeWithAggregatesFilter<"Personal"> | Date | string
+    department?: StringWithAggregatesFilter<"Personal"> | string
+    province?: StringWithAggregatesFilter<"Personal"> | string
+    district?: StringWithAggregatesFilter<"Personal"> | string
+    address?: StringWithAggregatesFilter<"Personal"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Personal"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Personal"> | Date | string
   }
 
-  export type UserCreateInput = {
-    name: string
-    email: string
-    password: string
+  export type PersonalCreateInput = {
+    firstName: string
+    lastName: string
+    documentType: string
+    documentNumber: string
+    profile: string
+    scrumMaster?: string | null
+    technicalLead?: string | null
+    squad?: string | null
+    phone: string
+    birthDate: Date | string
+    department: string
+    province: string
+    district: string
+    address: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type UserUncheckedCreateInput = {
+  export type PersonalUncheckedCreateInput = {
     id?: number
-    name: string
-    email: string
-    password: string
+    firstName: string
+    lastName: string
+    documentType: string
+    documentNumber: string
+    profile: string
+    scrumMaster?: string | null
+    technicalLead?: string | null
+    squad?: string | null
+    phone: string
+    birthDate: Date | string
+    department: string
+    province: string
+    district: string
+    address: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type UserUpdateInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+  export type PersonalUpdateInput = {
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
+    documentType?: StringFieldUpdateOperationsInput | string
+    documentNumber?: StringFieldUpdateOperationsInput | string
+    profile?: StringFieldUpdateOperationsInput | string
+    scrumMaster?: NullableStringFieldUpdateOperationsInput | string | null
+    technicalLead?: NullableStringFieldUpdateOperationsInput | string | null
+    squad?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    department?: StringFieldUpdateOperationsInput | string
+    province?: StringFieldUpdateOperationsInput | string
+    district?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type UserUncheckedUpdateInput = {
+  export type PersonalUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
+    documentType?: StringFieldUpdateOperationsInput | string
+    documentNumber?: StringFieldUpdateOperationsInput | string
+    profile?: StringFieldUpdateOperationsInput | string
+    scrumMaster?: NullableStringFieldUpdateOperationsInput | string | null
+    technicalLead?: NullableStringFieldUpdateOperationsInput | string | null
+    squad?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    department?: StringFieldUpdateOperationsInput | string
+    province?: StringFieldUpdateOperationsInput | string
+    district?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type UserCreateManyInput = {
+  export type PersonalCreateManyInput = {
     id?: number
-    name: string
-    email: string
-    password: string
+    firstName: string
+    lastName: string
+    documentType: string
+    documentNumber: string
+    profile: string
+    scrumMaster?: string | null
+    technicalLead?: string | null
+    squad?: string | null
+    phone: string
+    birthDate: Date | string
+    department: string
+    province: string
+    district: string
+    address: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type UserUpdateManyMutationInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+  export type PersonalUpdateManyMutationInput = {
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
+    documentType?: StringFieldUpdateOperationsInput | string
+    documentNumber?: StringFieldUpdateOperationsInput | string
+    profile?: StringFieldUpdateOperationsInput | string
+    scrumMaster?: NullableStringFieldUpdateOperationsInput | string | null
+    technicalLead?: NullableStringFieldUpdateOperationsInput | string | null
+    squad?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    department?: StringFieldUpdateOperationsInput | string
+    province?: StringFieldUpdateOperationsInput | string
+    district?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type UserUncheckedUpdateManyInput = {
+  export type PersonalUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
+    documentType?: StringFieldUpdateOperationsInput | string
+    documentNumber?: StringFieldUpdateOperationsInput | string
+    profile?: StringFieldUpdateOperationsInput | string
+    scrumMaster?: NullableStringFieldUpdateOperationsInput | string | null
+    technicalLead?: NullableStringFieldUpdateOperationsInput | string | null
+    squad?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    department?: StringFieldUpdateOperationsInput | string
+    province?: StringFieldUpdateOperationsInput | string
+    district?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2162,6 +2456,21 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
   export type DateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -2173,38 +2482,76 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type UserCountOrderByAggregateInput = {
+  export type SortOrderInput = {
+    sort: SortOrder
+    nulls?: NullsOrder
+  }
+
+  export type PersonalCountOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    email?: SortOrder
-    password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+    documentType?: SortOrder
+    documentNumber?: SortOrder
+    profile?: SortOrder
+    scrumMaster?: SortOrder
+    technicalLead?: SortOrder
+    squad?: SortOrder
+    phone?: SortOrder
+    birthDate?: SortOrder
+    department?: SortOrder
+    province?: SortOrder
+    district?: SortOrder
+    address?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
-  export type UserAvgOrderByAggregateInput = {
+  export type PersonalAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type UserMaxOrderByAggregateInput = {
+  export type PersonalMaxOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    email?: SortOrder
-    password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+    documentType?: SortOrder
+    documentNumber?: SortOrder
+    profile?: SortOrder
+    scrumMaster?: SortOrder
+    technicalLead?: SortOrder
+    squad?: SortOrder
+    phone?: SortOrder
+    birthDate?: SortOrder
+    department?: SortOrder
+    province?: SortOrder
+    district?: SortOrder
+    address?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
-  export type UserMinOrderByAggregateInput = {
+  export type PersonalMinOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    email?: SortOrder
-    password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+    documentType?: SortOrder
+    documentNumber?: SortOrder
+    profile?: SortOrder
+    scrumMaster?: SortOrder
+    technicalLead?: SortOrder
+    squad?: SortOrder
+    phone?: SortOrder
+    birthDate?: SortOrder
+    department?: SortOrder
+    province?: SortOrder
+    district?: SortOrder
+    address?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
-  export type UserSumOrderByAggregateInput = {
+  export type PersonalSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -2242,6 +2589,24 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -2258,6 +2623,10 @@ export namespace Prisma {
 
   export type StringFieldUpdateOperationsInput = {
     set?: string
+  }
+
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
   }
 
   export type DateTimeFieldUpdateOperationsInput = {
@@ -2295,6 +2664,20 @@ export namespace Prisma {
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     not?: NestedStringFilter<$PrismaModel> | string
+  }
+
+  export type NestedStringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
   export type NestedDateTimeFilter<$PrismaModel = never> = {
@@ -2350,6 +2733,34 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
     _max?: NestedStringFilter<$PrismaModel>
+  }
+
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {

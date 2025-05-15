@@ -14,11 +14,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String   @unique
-  password  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+model Personal {
+  id             Int      @id @default(autoincrement())
+  firstName      String
+  lastName       String
+  documentType   String   // DNI, CE
+  documentNumber String   @unique
+  profile        String
+  scrumMaster    String?
+  technicalLead  String?
+  squad          String?
+  phone          String
+  birthDate      DateTime
+  department     String
+  province       String
+  district       String
+  address        String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 }

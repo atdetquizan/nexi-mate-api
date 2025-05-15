@@ -120,11 +120,22 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.UserScalarFieldEnum = {
+exports.Prisma.PersonalScalarFieldEnum = {
   id: 'id',
-  name: 'name',
-  email: 'email',
-  password: 'password',
+  firstName: 'firstName',
+  lastName: 'lastName',
+  documentType: 'documentType',
+  documentNumber: 'documentNumber',
+  profile: 'profile',
+  scrumMaster: 'scrumMaster',
+  technicalLead: 'technicalLead',
+  squad: 'squad',
+  phone: 'phone',
+  birthDate: 'birthDate',
+  department: 'department',
+  province: 'province',
+  district: 'district',
+  address: 'address',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -139,9 +150,14 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
-  User: 'User'
+  Personal: 'Personal'
 };
 
 /**
