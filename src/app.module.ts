@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-
 import { PersonalModule } from './personal';
+
 @Module({
   imports: [PersonalModule],
   controllers: [],
