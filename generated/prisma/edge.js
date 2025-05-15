@@ -35,12 +35,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.7.0
- * Query Engine version: 3cff47a7f5d65c3ea74883f1d736e41d68ce91ed
+ * Prisma Client JS version: 6.8.1
+ * Query Engine version: 2060c79ba17c6bb9f5823312b6f6b7f4a845738e
  */
 Prisma.prismaVersion = {
-  client: "6.7.0",
-  engine: "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed"
+  client: "6.8.1",
+  engine: "2060c79ba17c6bb9f5823312b6f6b7f4a845738e"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -164,23 +164,24 @@ const config = {
     "schemaEnvPath": "../../.env"
   },
   "relativePath": "../../prisma",
-  "clientVersion": "6.7.0",
-  "engineVersion": "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed",
+  "clientVersion": "6.8.1",
+  "engineVersion": "2060c79ba17c6bb9f5823312b6f6b7f4a845738e",
   "datasourceNames": [
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMTEyOWMzOWMtMzRiZi00MjhlLTlhMGQtYTdjMzJmYzdlZTQ2IiwidGVuYW50X2lkIjoiNzQwM2Y5NTE4YmFhNTMyY2EyNDAyMjE3M2VhMWNkZDk4OTJlMzQxZTRhZWI4NDg0MzAwYzY4MjQ2ZDhhYzAxZiIsImludGVybmFsX3NlY3JldCI6ImU0OGU1YTBmLWRiZGItNDMwMC1iNWQ0LWExODhiZGY3NmMxYiJ9.sgdwm0Wtyyd8vZgYRboljgCWkJd9sUKOS8spHieULgA"
+        "value": null
       }
     }
   },
   "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Personal {\n  id             Int      @id @default(autoincrement())\n  firstName      String\n  lastName       String\n  documentType   String // DNI, CE\n  documentNumber String   @unique\n  profile        String\n  scrumMaster    String?\n  technicalLead  String?\n  squad          String?\n  phone          String\n  birthDate      DateTime\n  department     String\n  province       String\n  district       String\n  address        String\n  createdAt      DateTime @default(now())\n  updatedAt      DateTime @updatedAt\n}\n",
   "inlineSchemaHash": "da6feaad69b96e8dd63b599c3d221be6a1999aeeab5eebd085af9bc64c0ee0a7",
-  "copyEngine": false
+  "copyEngine": true
 }
 config.dirname = '/'
 
