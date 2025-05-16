@@ -1,7 +1,7 @@
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 import { Client, LocalAuth } from 'whatsapp-web.js';
-import path from 'path';
+import * as path from 'path';
 
 /**
  * Servicio para interactuar con WhatsApp a través de whatsapp-web.js.
@@ -17,6 +17,10 @@ export class WhatsappService implements OnModuleInit {
     authStrategy: new LocalAuth({
       dataPath: path.join('/tmp', '.wwebjs_auth'), // Almacenar sesiones en /tmp
     }),
+    puppeteer: {
+      headless: true,
+      args: ['--no-sandbox'],
+    },
   });
 
   /**
